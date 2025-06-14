@@ -60,7 +60,7 @@ if st.session_state.tasks:
         # Delete task
         if cols[2].button("🗑️", key=f"delete_{i}"):
             st.session_state.tasks.pop(i)
-            st.experimental_rerun()
+            st.rerun()
 
     # 🎉 Celebrate when all tasks are done
     if all(task["done"] for task in st.session_state.tasks) and st.session_state.tasks:
